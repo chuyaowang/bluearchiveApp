@@ -8,13 +8,22 @@ library(hrbrthemes)
 
 ui <- fluidPage(
   theme = bs_theme(version = 4, bootswatch = "cerulean"),
-  tags$head(HTML("<title>爱丽丝暴击了吗</title> <link rel='icon' type='png' href='logo.png'>")),
+  tags$head(HTML("
+                 <title>爱丽丝暴击了吗</title> <link rel='icon' type='png' href='logo.png'> 
+    ")), #tags$title also creates the <title></title> element
   # tags$img(
   #   src = "arisu.jpg",
   #   style = 'position: absolute'
   # ),
   
-  titlePanel(p("爱丽丝今天暴击了吗？",align="middle")),
+  titlePanel(h1("爱丽丝今天暴击了吗？",align="middle",
+                style="background-color:#2893e0;
+                padding:0px;
+                color:white;
+                padding-left:15px;
+                margin-left:-15px;
+                margin-right:-15px;
+                ")),
   hr(),
   
   sidebarLayout(
