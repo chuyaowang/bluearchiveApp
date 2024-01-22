@@ -1,6 +1,4 @@
 library(shiny)
-library(shinyFiles)
-library(shinycssloaders)
 library(bslib)
 library(ggplot2)
 library(viridis)
