@@ -10,9 +10,10 @@
 
 ## 安装
 
-- 基于R Shiny，目前需要用R Studio打开运行
-- 首先安装R和R Studio
-- 然后下载app.R和www/文件夹并安装需要的包即可使用
+- Demo页面：https://jumpingbeaver.shinyapps.io/counter/ 有使用时限
+- 基于R Shiny，目前在本地需要用R Studio打开运行
+    - 首先安装R和R Studio
+    - 然后下载app.R和www/文件夹并安装需要的包即可使用
 - 正在学习怎么用shinylive转换为网页应用，现在的版本还不能用
 
 

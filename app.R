@@ -8,6 +8,7 @@ library(hrbrthemes)
 
 ui <- fluidPage(
   theme = bs_theme(version = 4, bootswatch = "cerulean"),
+  tags$head(HTML("<title>爱丽丝暴击了吗</title> <link rel='icon' type='png' href='logo.png'>")),
   # tags$img(
   #   src = "arisu.jpg",
   #   style = 'position: absolute'
