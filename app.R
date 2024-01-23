@@ -10,7 +10,7 @@ ui <- fluidPage(
   theme = bs_theme(version = 4, bootswatch = "cerulean"),
   tags$head(HTML("
                  <title>爱丽丝暴击了吗</title> <link rel='icon' type='png' href='logo.png'> 
-    ")), #tags$title also creates the <title></title> element
+    ")), #tags$title creates the <title></title> element
   # tags$img(
   #   src = "arisu.jpg",
   #   style = 'position: absolute'
@@ -41,6 +41,12 @@ ui <- fluidPage(
           column(6,actionButton("nocrit","没暴击！😅"))
         ),
         align="middle"
+      ),
+      br(),
+      conditionalPanel(
+        condition = "output.showHint",
+        br(),
+        HTML("<div style='font-size:12px;text-align:center;color:grey'>下载图片：手机长按，电脑右键选择另存为</div>"),
       ),
       br(),
       div(
@@ -255,7 +261,14 @@ server <- function(input,output){
     freq_plot()
   },height=200,width=250)
   
+  output$showHint <- reactive({
+    req(freq_plot())
+    TRUE
+  })
+  outputOptions(output, "showHint", suspendWhenHidden = FALSE)
+  
   # Download button
+  ## 下载按键 -----
   outputName <- reactive({
     req(nrow(crit_record()>0),timeelapsed())
     
