@@ -25,4 +25,3 @@
     font_add("Songti", regular = "ttc格式的字体文件路径")
     showtext_auto()
     ```
-- 纯发癫作品，未来可能添加更多的功能
